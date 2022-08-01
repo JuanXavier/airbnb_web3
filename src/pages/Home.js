@@ -11,6 +11,7 @@ const Home = () => {
 	const [checkOut, setCheckOut] = useState(new Date())
 	const [destination, setDestination] = useState('New York')
 	const [guests, setGuests] = useState(2)
+
 	return (
 		<>
 			<div className='container' style={{backgroundImage: `url(${bg})`}}>
@@ -48,18 +49,12 @@ const Home = () => {
 					<div className='vl' />
 					<div className='inputs'>
 						Check In
-						<DatePicker
-							id='CheckIn'
-							onChange={(event) => setCheckIn(event.date)}
-						/>
+						<DatePicker id='CheckIn' onChange={(event) => setCheckIn(event.date)} />
 					</div>
 					<div className='vl' />
 					<div className='inputs'>
 						Check Out
-						<DatePicker
-							id='CheckOut'
-							onChange={(event) => setCheckOut(event.date)}
-						/>
+						<DatePicker id='CheckOut' onChange={(event) => setCheckOut(event.date)} />
 					</div>
 
 					<div className='vl' />
@@ -89,13 +84,9 @@ const Home = () => {
 			<div className='randomLocation'>
 				<div className='title'>Feel Adventures</div>
 				<div className='text'>
-					Let us decide and discover new places to stay, live, work or just
-					relax.
+					Let us decide and discover new places to stay, live, work or just relax.
 				</div>
-				<Button
-					text='Explore A Location'
-					onClick={() => console.log(checkOut)}
-				/>
+				<Button text='Explore A Location' onClick={() => console.log(checkOut)} />
 			</div>
 		</>
 	)

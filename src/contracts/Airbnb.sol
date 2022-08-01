@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.7;
+pragma solidity 0.8.9;
 
-contract airbnb {
+contract Airbnb {
     address public owner;
     uint256 private counter;
 
@@ -80,7 +80,9 @@ contract airbnb {
         newRental.datesBooked = datesBooked;
         newRental.id = counter;
         newRental.renter = owner;
+
         rentalIds.push(counter);
+
         emit rentalCreated(
             name,
             city,
